@@ -67,8 +67,6 @@ class _trs轉json:
                         'trs聽拍': 上尾資料,
                     })
                     這馬資料 = ''
-            elif 句.startswith('<'):
-                這馬資料 = 這馬資料 + ' '
             elif 句.startswith('\ufeff'):
                 這馬資料 = 這馬資料 + ' '
             else:
