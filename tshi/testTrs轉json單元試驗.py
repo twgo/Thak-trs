@@ -22,7 +22,11 @@ la0159215 ga 咱e 台語 講做 是 北京語 e 方言， ga3 lan1_e2 dai3_qi4 g
                 '開始時間': '3919.18400000001',
                 '結束時間': '3921.48800000001',
                 '語者': '市場商家2',
-                'trs聽拍': 'la0159214 過去 政府 e 國語 政策， gue4_ki4 zing4_hu4 e2 gok1_qi1 zing4_cik2',
+                'trs聽拍': (
+                    'la0159214 過去 政府 e 國語 政策， gue4_ki4\n'
+                    '<Event desc="ki3" type="lexical" extent="previous"/>\n'
+                    ' zing4_hu4 e2 gok1_qi1 zing4_cik2'
+                ),
             },
             {
                 '開始時間': '3921.48800000001',
@@ -67,7 +71,11 @@ sg0200227 非常 成功 deh 徹底 分化 台灣 族群 間 e 共同 意識。 h
                 '開始時間': '5750.208',
                 '結束時間': '5754.48',
                 '語者': '市場商家2',
-                'trs聽拍': 'sg0200225 生態 倫理，致使 歸個 議題 變做 攏 失去 焦點。 sing2-tai3 lun3-li4,di4-su1 gui2-e3 qe3-de5 ben4-zor4 long1 sit1-ki1 ziau2-diam4',
+                'trs聽拍': (
+                    'sg0200225 生態 倫理，致使 歸個 議題 變做 攏 失去 焦點。 sing2-tai3 lun3-li4,di4-su1 gui2-e3 qe3\n'
+                    '<Event desc="qi3" type="lexical" extent="previous"/>\n'
+                    '-de5 ben4-zor4 long1 sit1-ki1 ziau2-diam4'
+                )
             },
             {
                 '開始時間': '5754.48',
@@ -182,7 +190,7 @@ sg0184018 當然電腦鍵盤 是最主要的 輸入工具；/dong2-ren5-den3-nau
     def test_有外文標仔(self):
         self.原來 = '''
 <Speaker id="spk22" name="市場商家2" check="no" dialect="native" accent="" scope="local"/>
-<Turn speaker="spk22" startTime="0" endTime="69.332">
+<Turn speaker="spk22" startTime="5520.704" endTime="5569.332">
 <Sync time="5520.704"/>
 sg0200152 震驚 全 台灣。zin4-giann2 zuan2 dai2-uan5
 <Sync time="5522.112"/>
@@ -192,7 +200,7 @@ sg0200154 莫那˙魯道gah抗日族人退守馬赫坡，
 <Event desc="zh" type="language" extent="begin"/>
 莫那魯道
 <Event desc="zh" type="language" extent="end"/>
- gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1 
+ gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1
 <Sync time="5530.208"/>
 sg0200155 利用 天險 gah 日軍 對峙。 li3-iong3 ten2-hiam4 gah1 rit3-gun1 dui4-cai2
 <Sync time="5532.88"/>
@@ -216,7 +224,13 @@ sg0200156 日方 則 利用 道澤蕃「以夷 制夷」， rit3-hong1 zik1 li3-
                 '開始時間': '5526.496',
                 '結束時間': '5530.208',
                 '語者': '市場商家2',
-                'trs聽拍': 'sg0200154 莫那˙魯道gah抗日族人退守馬赫坡， 莫那魯道 gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1',
+                'trs聽拍': (
+                    'sg0200154 莫那˙魯道gah抗日族人退守馬赫坡，\n'
+                    '<Event desc="zh" type="language" extent="begin"/>\n'
+                    '莫那魯道\n'
+                    '<Event desc="zh" type="language" extent="end"/>\n'
+                    ' gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1'
+                )
             },
             {
                 '開始時間': '5530.208',
@@ -264,7 +278,11 @@ sg0103054 而且， /li3-ciann1
                 '開始時間': '4998.256',
                 '結束時間': '5000.208',
                 '語者': '市場商家2',
-                'trs聽拍': 'sg0103053 以及 溫柔 e 神情。/i1-gip3 un2-ru5 e3 sin2-zing5',
+                'trs聽拍': (
+                    'sg0103053 以及 溫柔 e 神情。/i1-gip3 un2-ru5 e3 sin2\n'
+                    '<Event desc="sim2" type="lexical" extent="instantaneous"/>\n'
+                    '-zing5'
+                ),
             },
             {
                 '開始時間': '5000.208',
@@ -344,21 +362,26 @@ sg0103052 特殊 e 癖好、/dik3-su5 e3 pi4-hor4
 '''
         self.結果 = [
             {
+                '開始時間': '0',
+                '結束時間': '3.245',
+                '語者': '無註明',
+                'trs聽拍': '<Event desc="silence" type="noise" extent="instantaneous"/>',
+            },
+            {
                 '開始時間': '3.245',
                 '結束時間': '359.3665625',
                 '語者': '無註明',
                 'trs聽拍': '011 細漢的時陣//de3-zap3-it-pinn1,se4-han3-e2-si2-zun2-',
-            }
+            },
         ]
 
     def test_後壁有恬的時間愛算入來(self):
-        return
-        self.原來 = """<Turn startTime="1284.118" endTime="1286.712">
+        self.原來 = """<Turn startTime="1284.118" endTime="1286.999">
 <Sync time="1284.118"/>
 ah1-li1-gorh1-rin3-ui3,zeh1-vor2-li4-diorh2-vor3-
 <Sync time="1285.634"/>
 si3-an1-na4,ve3-dang4-gong4-
-<Sync time="1285.928"/>
+<Sync time="1286.928"/>
 <Event desc="silence" type="noise" extent="instantaneous"/>
 </Turn>"""
         self.結果 = [
@@ -370,14 +393,19 @@ si3-an1-na4,ve3-dang4-gong4-
             },
             {
                 '開始時間': '1285.634',
-                '結束時間': '1286.712',
+                '結束時間': '1286.928',
                 '語者': '無註明',
                 'trs聽拍': 'si3-an1-na4,ve3-dang4-gong4-',
+            },
+            {
+                '開始時間': '1286.928',
+                '結束時間': '1286.999',
+                '語者': '無註明',
+                'trs聽拍': '<Event desc="silence" type="noise" extent="instantaneous"/>',
             },
         ]
 
     def test_後壁有無仝組的恬時間愛算入來(self):
-        return
         self.原來 = """<Speaker id="spk21" name="市場商家1" check="no" dialect="native" accent="" scope="local"/>
 <Speaker id="spk22" name="市場商家2" check="no" dialect="native" accent="" scope="local"/>
 <Turn speaker="spk21" startTime="1284.118" endTime="1286.712">
@@ -386,10 +414,10 @@ ah1-li1-gorh1-rin3-ui3,zeh1-vor2-li4-diorh2-vor3-
 <Sync time="1285.634"/>
 si3-an1-na4,ve3-dang4-gong4-
 </Turn>
-<Turn speaker="spk22" startTime="1286.712" endTime="1386.712">
+<Turn speaker="spk22" startTime="1286.712" endTime="1393.712">
 <Sync time="1286.712"/>
 <Event desc="silence" type="noise" extent="instantaneous"/>
-<Sync time="1385.634"/>
+<Sync time="1289.634"/>
 si3-an1-na4,ve3-dang4-gong4-
 </Turn>"""
         self.結果 = [
@@ -401,13 +429,20 @@ si3-an1-na4,ve3-dang4-gong4-
             },
             {
                 '開始時間': '1285.634',
-                '結束時間': '1385.634',
+                '結束時間': '1286.712',
                 '語者': '市場商家1',
                 'trs聽拍': 'si3-an1-na4,ve3-dang4-gong4-',
             },
+
             {
-                '開始時間': '1385.634',
-                '結束時間': '1386.712',
+                '開始時間': '1286.712',
+                '結束時間': '1289.634',
+                '語者': '市場商家2',
+                'trs聽拍': '<Event desc="silence" type="noise" extent="instantaneous"/>',
+            },
+            {
+                '開始時間': '1289.634',
+                '結束時間': '1393.712',
                 '語者': '市場商家2',
                 'trs聽拍': 'si3-an1-na4,ve3-dang4-gong4-',
             },
