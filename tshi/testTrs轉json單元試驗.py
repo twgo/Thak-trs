@@ -190,7 +190,7 @@ sg0184018 當然電腦鍵盤 是最主要的 輸入工具；/dong2-ren5-den3-nau
     def test_有外文標仔(self):
         self.原來 = '''
 <Speaker id="spk22" name="市場商家2" check="no" dialect="native" accent="" scope="local"/>
-<Turn speaker="spk22" startTime="0" endTime="69.332">
+<Turn speaker="spk22" startTime="5520.704" endTime="5569.332">
 <Sync time="5520.704"/>
 sg0200152 震驚 全 台灣。zin4-giann2 zuan2 dai2-uan5
 <Sync time="5522.112"/>
@@ -278,7 +278,11 @@ sg0103054 而且， /li3-ciann1
                 '開始時間': '4998.256',
                 '結束時間': '5000.208',
                 '語者': '市場商家2',
-                'trs聽拍': 'sg0103053 以及 溫柔 e 神情。/i1-gip3 un2-ru5 e3 sin2-zing5',
+                'trs聽拍': (
+                    'sg0103053 以及 溫柔 e 神情。/i1-gip3 un2-ru5 e3 sin2\n'
+                    '<Event desc="sim2" type="lexical" extent="instantaneous"/>\n'
+                    '-zing5'
+                ),
             },
             {
                 '開始時間': '5000.208',
