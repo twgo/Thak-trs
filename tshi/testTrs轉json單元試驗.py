@@ -200,7 +200,7 @@ sg0200154 莫那˙魯道gah抗日族人退守馬赫坡，
 <Event desc="zh" type="language" extent="begin"/>
 莫那魯道
 <Event desc="zh" type="language" extent="end"/>
- gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1 
+ gah1 kong4-rit2 zok3-rin5 tue4-siu1 ma1-hip1-por1
 <Sync time="5530.208"/>
 sg0200155 利用 天險 gah 日軍 對峙。 li3-iong3 ten2-hiam4 gah1 rit3-gun1 dui4-cai2
 <Sync time="5532.88"/>
