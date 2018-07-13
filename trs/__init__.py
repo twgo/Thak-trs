@@ -11,7 +11,7 @@ class _trs轉json:
 
     @classmethod
     def trs檔案(cls, trs):
-        with open(trs) as 檔案:
+        with open(trs, encoding='utf-8') as 檔案:
             return cls.trs字串(檔案.read())
 
     @classmethod
