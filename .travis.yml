@@ -18,3 +18,12 @@ script:
 after_success:
 - coverage report
 - coveralls
+deploy:
+  provider: pypi
+  user: sih4sing5hong5
+  password:
+    secure: woUqNgByFI4lV/HeQdd2dtJJxPVctncfCB6zwMAlL59k5Yme7yEZqYlUAe9SQY9S14AkhCcGjFT4Y6VFDw5+2N8yfzee2DIICtHaE9saUZ4LYmhMWrusrgy4lJU7LfFrb/gji13Z2TIDRoSTJsxXbYFIZ2bRualmexdg6sthQql/LXaopOOKRIQthxv7ZzM1f20/OcyViVY6xpYi/fHhTEIglMx/bz/IeUqTodSyoxv4rQZaF4Z4PvoTcRiNvLqnN/RZ3OU1MNfRv32A6fyW2CX3HXBMna0DGtuXgJNhvQA1Ot63+CpCpzBUw0x6t8wy5L1R4YzReqbRKE/+BhrUsRRuZuREXXnXKNzrTKfF5tkN8hbAepYVLVnKwcn2gdSYTm0HHNx2XBDe/KU6SeNLnXIvaFjTvhP+3jWlMAZvz93Vw6pQx2MBYr6yffaz49I4LvRA48Jt/6hINiX+uU/xHcGsDmUCSZsryuCt95W1G529fjiS3sLvbBmPXBRr373o33kq7GCoqRL+ovKOIEnQxr9cxT7RO160DZr8q2jLGGyyK8T8IpG6mncUlzULgaw/R+/02/RAwht/V74LEOxeYayp0PyJZJeF3oe2ESPJOfMpncEnh9pZq3QKswUJaLVmAcyfdZDpqv8faOKojhZARA569MGeMwD9tmmNJhrJruo=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: twgo/Thak-trs
