@@ -16,9 +16,6 @@ branches:
   - "/^\\d+\\.\\d+\\.\\d+$/"
 script:
 - tox -e $TOX_ENV
-after_success:
-- coverage report
-- coveralls
 deploy:
   provider: pypi
   user: sih4sing5hong5
