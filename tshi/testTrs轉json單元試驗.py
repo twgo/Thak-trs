@@ -447,3 +447,37 @@ si3-an1-na4,ve3-dang4-gong4-
                 'trs聽拍': 'si3-an1-na4,ve3-dang4-gong4-',
             },
         ]
+
+    def test_D_01_trs(self):
+        self.原來 = '''<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Trans SYSTEM "trans-14.dtd">
+<Trans scribe="sann-pan" audio_filename="D-01" version="32" version_date="180702">
+<Speakers>
+<Speaker id="spk1" name="張素華" check="no" dialect="native" accent="" scope="local"/>
+<Speaker id="spk2" name="楊碧川" check="no" dialect="native" accent="" scope="local"/>
+<Speaker id="spk4" name="黃越綏" check="no" dialect="native" accent="" scope="local"/>
+</Speakers>
+<Topics>
+<Topic id="to1" desc="xx"/>
+</Topics>
+<Episode>
+<Section type="report" topic="to1" startTime="0" endTime="1495.197">
+<Turn speaker="spk1" startTime="0.000000" endTime="88.204">
+<Sync time="0.000000"/>
+漢字：各位 親愛 , 聽眾 朋友 , 逐家 冤 咱 , 我是 所 華
+臺羅：kok8-ui7-tshin7-ai3,thiann7-tsiong2-ping7-iu2,tak10-ke7-uan1-an1,gua1-si3-soo2-hua5-
+華語字幕：
+</Turn>
+</Section>
+</Episode>
+'''
+        self.結果 = [
+            {
+                '開始時間': '0.000000',
+                '結束時間': '88.204',
+                '語者': '張素華',
+                'trs聽拍': '漢字：各位 親愛 , 聽眾 朋友 , 逐家 冤 咱 , 我是 所 華\n'
+                '臺羅：kok8-ui7-tshin7-ai3,thiann7-tsiong2-ping7-iu2,tak10-ke7-uan1-an1,gua1-si3-soo2-hua5-\n'
+                '華語字幕：',
+            },
+        ]

@@ -53,7 +53,8 @@ class _trs轉json:
                 if cls._這馬敢有資料(這馬資料陣列):
                     if 頂一个時間 is None:
                         raise RuntimeError(
-                            'trs有問題，無Sync時間煞有文本，賰：{}'.format(這馬資料陣列))
+                            'trs有問題，無Sync時間煞有文本，賰：{}'.format(這馬資料陣列)
+                        )
                     資料.append({
                         '開始時間': 頂一个時間,
                         '結束時間': 這馬時間,
@@ -61,6 +62,22 @@ class _trs轉json:
                         'trs聽拍': '\n'.join(這馬資料陣列).rstrip(),
                     })
                 這馬資料陣列 = []
+            elif (
+                句.startswith('<?xml') or
+                句.startswith('<!DOCTYPE') or
+                句.startswith('<Trans') or
+                句.startswith('</Trans') or
+                句.startswith('<Speakers') or
+                句.startswith('</Speakers') or
+                句.startswith('<Topic') or
+                句.startswith('</Topic') or
+                句.startswith('<Episode') or
+                句.startswith('</Episode') or
+                句.startswith('<Section') or
+                句.startswith('</Section') or
+                句.startswith('<Episode')
+            ):
+                pass
             else:
                 這馬資料陣列.append(句)
         if cls._這馬敢有資料(這馬資料陣列):
