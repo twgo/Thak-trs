@@ -25,3 +25,5 @@ deploy:
     tags: true
     distributions: sdist bdist_wheel
     repo: twgo/Thak-trs
+    condition: $TOX_ENV = 單元試驗
+    
